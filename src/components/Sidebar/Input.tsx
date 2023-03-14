@@ -10,7 +10,7 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
   { ...rest }: InputProps,
   ref
 ) => {
-  return <ChakraInput ref={ref} variant="flushed" {...rest} />;
+  return <ChakraInput px={4} ref={ref} variant="flushed" {...rest} />;
 };
 
 export const Input = forwardRef(InputBase);
