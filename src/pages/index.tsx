@@ -47,9 +47,11 @@ export default function Home({ initialWeather }: HomeProps) {
     <Flex
       direction="column"
       h="100vh"
+      w="100vw"
       overflow="hidden"
       bgGradient="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/rain.jpg)"
-      bgSize="100%"
+      objectFit="cover"
+      bgRepeat="no-repeat"
     >
       <HStack position="absolute" bottom={24} left={24} userSelect="none">
         <Text fontSize={164} fontWeight="medium">

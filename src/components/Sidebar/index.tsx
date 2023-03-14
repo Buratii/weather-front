@@ -43,15 +43,15 @@ export default function Sidebar({ history, search, weather }: SidebarProps) {
     <Box
       as="aside"
       h="100%"
-      w="36%"
+      w={["100%", "36%"]}
       min-w="96"
-      bg="rgba( 0, 0, 0, 0.7 )"
+      bg={["rgba( 0, 0, 0, 0 )", "rgba( 0, 0, 0, 0.7 )"]}
       boxShadow="0 8px 32px 0 rgba( 0, 0, 0, 0.37 )"
       backdropFilter="blur( 7.5px )"
-      position="absolute"
+      position={["fixed", "absolute"]}
       right={0}
     >
-      <Flex flexDir="column">
+      <Flex flexDir="column" position={["absolute", "initial"]} width={"100%"}>
         <HStack w="full" h="100vh" align="flex-start">
           <Stack w="full" mx="16" py="14">
             <Input ref={inputRef} placeholder="Another location" />
@@ -82,7 +82,7 @@ export default function Sidebar({ history, search, weather }: SidebarProps) {
             <Divider />
 
             <Stack minH="96" py="4" justify="space-between" userSelect="none">
-              <Text fontSize="sm" my={12} fontWeight="medium">
+              <Text fontSize={["xl", "sm"]} my={12} fontWeight="medium">
                 Weather Details
               </Text>
               <Detail title="Cloudy" data={`${weather.current.cloud}%`} />

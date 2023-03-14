@@ -1,15 +1,17 @@
-import { HStack, Text } from "@chakra-ui/react";
+import { HStack, Text, StackProps } from "@chakra-ui/react";
 
-interface DetailProps {
+interface DetailProps extends StackProps {
   title: string;
   data: string | number;
 }
 
-export default function Detail({ title, data }: DetailProps) {
+export default function Detail({ title, data, ...rest }: DetailProps) {
   return (
-    <HStack justify="space-between">
-      <Text color="gray.500">{title}</Text>
-      <Text>{data}</Text>
+    <HStack justify="space-between" {...rest}>
+      <Text color="gray.500" fontSize={["2xl", "md"]}>
+        {title}
+      </Text>
+      <Text fontSize={["2xl", "md"]}>{data}</Text>
     </HStack>
   );
 }
