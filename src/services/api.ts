@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
 
 const api: AxiosInstance = axios.create({
-  baseURL: 'https://api.weatherapi.com/v1/current.json?key=4939c1477c2048b99fb152700232302&aqi=no'
+  baseURL: 'http://api.weatherapi.com/v1/current.json?key=7c6d675573a64633a86235836230803&aqi=no',
 })
 
 export default api;
